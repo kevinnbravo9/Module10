@@ -151,4 +151,14 @@ Run unit and integration tests together:
 python -m pytest tests/unit tests/integration -v
 ```
 
-During local Module 10 verification, 
+During local Module 10 verification, all 36 unit and integration
+tests passed with 100% coverage of the application modules measured
+by pytest-cov.
+
+The GitHub Actions workflow successfully completed its test, security,
+and deploy jobs. The Docker image was published to Docker Hub and
+verified by pulling and running the published image. The FastAPI
+documentation endpoint returned HTTP 200.
+
+The security pipeline uses Trivy to scan the Docker image for
+HIGH and CRITICAL vulnerabilities before deployment. 
